@@ -13,7 +13,7 @@ const initialState: CategoryState = {
     error: null,
 };
 
-export const fetchAllCategory = createAsyncThunk<
+export const fetchAllCategory:any = createAsyncThunk<
     string[],
     undefined,
     { rejectValue: string }
