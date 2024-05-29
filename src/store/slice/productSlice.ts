@@ -20,7 +20,7 @@ export const fetchAllProducts = createAsyncThunk<
     { rejectValue: string }
 >("product/fetchAllProducts", async (_, thunkAPI) => {
     try {
-        const products = await axios.get("https://fakestoreapi.com/products");
+        const products = await axios.get(`${import.meta.env.VITE_SERVER_PATH}/products`);
         return products.data;
     } catch (error: any) {
         return thunkAPI.rejectWithValue(error.message);

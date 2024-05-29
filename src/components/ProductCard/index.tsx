@@ -40,6 +40,9 @@ const ProductCard = ({ product }: {product: ProductInterface}) => {
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
+                [theme.breakpoints.down('xl')]: {
+                  width: '19vw',
+                },
                 [theme.breakpoints.down('lg')]: {
                   width: '19vw',
                 },
@@ -60,7 +63,7 @@ const ProductCard = ({ product }: {product: ProductInterface}) => {
             sx={{
               '&.MuiCardMedia-root': {
                 objectFit: 'contain',
-                height: '18vh'
+                height: '18vh',
               }
             }}
           />

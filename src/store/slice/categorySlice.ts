@@ -19,7 +19,7 @@ export const fetchAllCategory:any = createAsyncThunk<
     { rejectValue: string }
 >("category/fetchAllCategory", async (categorie, thunkAPI) => {
     try {
-        const category = await axios.get(`https://fakestoreapi.com/products/category/${categorie}`);
+        const category = await axios.get(`${import.meta.env.VITE_SERVER_PATH}/products/category/${categorie}`);
         return category.data;
     } catch (error: any) {
         return thunkAPI.rejectWithValue(error.message);
